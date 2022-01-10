@@ -11,12 +11,13 @@ function Cep() {
     <div className="container">
       <h1 className="title">Busca CEP</h1>
       <div className="containerInput">
-        <input type="text" placeholder="Digite o seu CEP" />
-        <button
-          className="btnSearch"
+        <input
+          type="text"
+          placeholder="Digite o seu CEP"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-        >
+        />
+        <button className="btnSearch" onClick={handleSearch}>
           <FiSearch className="animation" size={25} color="#fff" />
         </button>
       </div>
