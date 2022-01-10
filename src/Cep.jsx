@@ -1,7 +1,7 @@
 import './styles.css';
 import { FiSearch } from 'react-icons/fi';
 import { useState } from 'react';
-
+import api from './services/api';
 
 function Cep() {
   const [input, setInput] = useState('');
@@ -21,6 +21,7 @@ function Cep() {
       setInput('');
     }
   }
+
   return (
     <div className="container">
       <h1 className="title">Busca CEP</h1>
@@ -35,13 +36,17 @@ function Cep() {
           <FiSearch className="animation" size={25} color="#fff" />
         </button>
       </div>
+      {Object.keys(cep).length > 0 && (
         <main className="main">
-          <h2>CEP : 12832</h2>
-          <span>Rua</span>
-          <span>Complemento : </span>
-          <span>Bairro</span>
-          <span>Brasil - SP</span>
+          <h2>CEP : {cep.cep}</h2>
+          <span>{cep.logradouro}</span>
+          <span>Complemento : {cep.complemento}</span>
+          <span>{cep.bairro}</span>
+          <span>
+            {cep.localidade} - {cep.uf}
+          </span>
         </main>
+      )}
     </div>
   );
 }
