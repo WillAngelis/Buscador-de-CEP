@@ -7,6 +7,20 @@ function Cep() {
   const [input, setInput] = useState('');
   const [cep, setCep] = useState({});
 
+  async function handleSearch() {
+    if (input === '') {
+      alert('Preencha o campo CEP');
+      return;
+    }
+    try {
+      const response = await api.get(`${input}/json`);
+      setCep(response.data);
+      setInput('');
+    } catch {
+      alert('ERROR');
+      setInput('');
+    }
+  }
   return (
     <div className="container">
       <h1 className="title">Busca CEP</h1>
