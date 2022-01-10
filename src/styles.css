@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to right, #0052d4, #4364f7, #6fb1fc);
+  height: 100vh;
+}
+.title {
+  font-size: 80px;
+  color: #fff;
+  animation: flip 600ms;
+}
+.animation {
+  animation: show 300ms;
+}
+.containerInput {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px 10px;
+  width: 460px;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
+}
+.containerInput input {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  outline: none;
+  animation: turnOn 300ms;
+}
+
+.containerInput input::placeholder {
+  color: rgb(219, 219, 219);
+  transition: all ease;
+}
+
