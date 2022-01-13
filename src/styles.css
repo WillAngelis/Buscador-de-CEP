@@ -17,7 +17,8 @@
 .containerInput {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 20px 10px;
-  width: 460px;
+  margin: auto;
+  max-width: 980px;
   margin: 30px 0;
   display: flex;
   justify-content: space-evenly;
@@ -122,9 +123,9 @@
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 520px) {
   .title {
-    font-size: 60px;
+    font-size: 40px;
   }
 
   .main h2 {
@@ -134,5 +135,15 @@
   .main {
     width: 80%;
     min-height: 250px;
+  }
+  .main span{
+    font-size: 14px;
+  }
+  .containerInput{
+    padding: 10px;
+    justify-content: center;
+  }
+  .containerInput input{
+    font-size: 14px;
   }
 }
