@@ -1,6 +1,6 @@
 import './styles.css';
 import { FiSearch } from 'react-icons/fi';
-import { useState } from 'react';
+import { useState, KeyboardEvent } from 'react';
 import api from './services/api';
 
 function Cep() {
@@ -22,6 +22,12 @@ function Cep() {
     }
   }
 
+  const handleKeyUp = (e: KeyboardEvent) => {
+    if (e.code === 'Enter') {
+      handleSearch(input)
+      setInput('');
+    }
+  };
   return (
     <div className="container">
       <h1 className="title">Busca CEP</h1>
@@ -31,6 +37,7 @@ function Cep() {
           placeholder="Digite o seu CEP"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyUp={handleKeyUp}
         />
         <button className="btnSearch" onClick={handleSearch}>
           <FiSearch className="animation" size={25} color="#fff" />
