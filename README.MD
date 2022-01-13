@@ -10,7 +10,7 @@ Um buscador de CEP simples utilizando React, ReactIcons e Axios para consumo da 
 
 <img src="./readme/img/mobile.png" width="200" height="400" />
 
-O site está hospedado na vercel você pode acessa-lo por este link https://cronometro-eight.vercel.app/
+O site está hospedado na vercel você pode acessa-lo por este link https://cep-gamma.vercel.app/
 
 ## Stack utilizada
 
