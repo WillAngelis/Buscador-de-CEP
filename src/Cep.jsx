@@ -17,7 +17,7 @@ function Cep() {
       setCep(response.data);
       setInput('');
     } catch {
-      alert('ERROR');
+      alert('O CEP não foi encontrado tente novamente');
       setInput('');
     }
   }
