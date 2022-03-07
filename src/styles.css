@@ -125,7 +125,7 @@
 
 @media (max-width: 520px) {
   .title {
-    font-size: 40px;
+    font-size: 3rem;
   }
 
   .main h2 {
@@ -140,7 +140,7 @@
     font-size: 14px;
   }
   .containerInput{
-    padding: 10px;
+    padding: 10px 25px;
     justify-content: center;
   }
   .containerInput input{
